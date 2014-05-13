@@ -1,0 +1,46 @@
+ <ship name="Thurion Intellect">
+  <base_type>Intellect</base_type>
+  <GFX sx="10" sy="10">Pacifier</GFX> <!-- FIXME: Thurion needs its own sprites, right? -->
+  <GUI>slim</GUI>
+  <sound>engine</sound>
+  <class>Corvette</class>
+  <price>1000000</price>
+  <fabricator>Thurion Shipyards</fabricator>
+  <description>The Intellect is a relativly new Thurion Design. Like all Thurion Designs, its defenses much outmatch the combat capibility. This ship is able to hold its own against all of the other corvette-class ships in the galaxy. </description>
+  <movement>
+   <thrust>100</thrust>
+   <turn>150</turn>
+   <speed>200</speed>
+  </movement>
+  <health>
+   <shield>600</shield>
+   <armour>700</armour>
+   <energy>500</energy>
+   <shield_regen>100</shield_regen>
+   <armour_regen>0</armour_regen>
+   <energy_regen>1100</energy_regen>
+  </health>
+  <characteristics>
+   <cpu>100</cpu>
+   <crew>10</crew>
+   <mass>300</mass>
+   <fuel>400</fuel>
+   <cap_cargo>40</cap_cargo>
+  </characteristics>
+  <slots>
+ <weapon size=medium" x="8" y="-5" h="-2"/>
+  <weapon size=medium" x="8" y="-5" h="-2"/>
+  <weapon size=medium" x="8" y="-5" h="-2/>
+ <weapon size="small" x="8" y="-5" h="-2"/>
+  <weapon size="small" x="8" y="5" h="-2"/>
+  <utility size="small" prop="systems" exclusive="1" required="1">Basic Small Systems</utility>
+  <utility size="small"/>
+  <utility size="small"/>
+  <utility size="small"/>
+  <structure size="small" prop="engines" exclusive="1" required="1">Manufacturer Small Engine</structure>
+  <structure size="small" prop="hull" exclusive="1" required="1">Unmodified Small Hull</structure>
+  <structure size="small"/>
+  <structure size="small"/>
+  </slots>
+ </ship>
+
