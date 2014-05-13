@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<outfit name="Derivitive">
+ <general>
+  <license>Medium Combat Vessel License</license>
+  <mass>100</mass>
+  <price>500000</price>
+  <gfx_store>derivitive_fighter</gfx_store>
+  <description>This is a derivitive fighter adapted for use in the Proteron Derivitive fighter bay. The ships are armed with standared plasma blasters and missile launchers </general>
+ <specific type="fighter">
+  <ship>Derivitive</ship>
+ </specific>
+</outfit>
