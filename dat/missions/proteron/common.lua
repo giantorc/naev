@@ -11,19 +11,12 @@
 --
 -- @return A random official portrait name.
 --]]
-function emp_getOfficialRandomPortrait 
-	local portraits
-	"empire/empire1",
-    "empire/empire2"
-    }
-    
-    return portraits[ rnd.rnd( 1, #portraits ) ]
-end
+
 
 --[[
    @brief Increases the reputation limit of the player.
 --]]
 function pr_modReputation( increment )
 	local cur = var.peek ("fcap_proteron") or 30
-	var.push("_fcap_empire", math.min(cur+increment, 100)
+	var.push("_fcap_sirius", math.min(cur+increment, 100)
 end

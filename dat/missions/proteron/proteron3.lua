@@ -478,6 +478,7 @@ function land ()
       end      
 
       -- modify the faction standing
+      faction.modPlayerSingle("Proteron", 1)
       faction.modPlayerSingle("Dvaered", rnd.rnd(1, num_patrol/2) )
       faction.modPlayerSingle("FLF", -3)
 
