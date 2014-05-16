@@ -3,6 +3,7 @@ include "numstring.lua"
 	lang = naev.lang
 	else
 
+	misn.name = "proteron4"
 	bar_desc = "Agent Ulsindaar"
 	misn_title = "Report Back"
 	misn_reward = "None"
