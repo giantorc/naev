@@ -7,7 +7,7 @@
   <mass>1000</mass>
   <price>700000</price>
   <gfx_store>derivitive_fighter</gfx_store>
-  <description>This bay, designed by the Proteron to carry their Derivitive light fighters. 
+  <description>This bay, designed by the Proteron to carry their Derivitive light fighters.</description>
   <cpu>-70</cpu>
  </general>
  <specific type="fighter bay" secondary="1">
