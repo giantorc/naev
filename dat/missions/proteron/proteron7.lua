@@ -21,14 +21,11 @@ else
 	title[3] = "Victory"
 	text[3] = [[As the Empire is destroyed by the Proteron Forces, the Proteron general, Kan Orothier, reports that they are recieving distress calls to Zalek, Dvaered, Sirius, and Goddard]]
 	
-	title[4] = "Gather the Fleet"
-	osd[1] = "Gather the Fleet in the Goddard System"
-	
-	title[5] = "Attack Outer Defenses"
-	osd[2] = "Attack the Empire Defenses in the Knave system"
+	title[4] = "Attack"
+	osd[1] = "Attack the Empire"
 	
 function create()
-	missys = {system.get("Knave"), system.get("Arcturus"), system.get("Gamma Polaris"), system.get("Draygar")}
+	missys = system.get("Arcturus"), system.get("Gamma Polaris")
 		misn.finish()
 	end
 	
@@ -87,4 +84,106 @@ function sysenter()
 		end
 		
 		empireB[#empireB + 1] = pilot.add("Empire Peacemaker", nil, empireBpos)[1]
+			empireB[#empireB]:setNodisable()
+			empireB[#empireB]:setFaction( "Empire" )
+			hook.pilot(fleetC[#fleetC], "death", "emp_dead")
+		end
+		empireC = addShips("Empire Lancelot", nil, empireCpos, 30)
+		empireC = addShips("Empire Shark", nil, empireCpos, 40)
+		empireC = addShips("Shroedinger", nil, empireCpos, 20)
 		
+		for _, j in ipairs(fleetA) do
+				j:control()
+				j:changeAI("idle")
+				j:face(empireBpos)
+				j:setVisable()
+			
+		for _, j in ipairs(empireB) do
+                j:control()
+                j:face(fleetApos)
+                j:setVisible()
+        
+        for _, j in ipairs(empireC) do
+				j:control()
+				j:face(fleetApos)
+				j:setVisable()
+		end
+		
+		hook.timer(500, "proximity", {location = fleetEpos, radius = 800, funcname = "prestartBattle"})
+		
+            if last_sys ~= misn_target_sys2 then
+            -- Jumped in through the wrong jump point
+                alertEmpire()
+                for _, j in ipairs(fleetC) do
+                    j:control()
+                    j:attack(player.pilot())
+                end
+            end
+        elseif system.cur() == misn_target_sys1 or system.cur() == misn_target_sys2 then
+            pilot.clear()
+            pilot.toggleSpawn(false)
+            misn.osdActive(1)
+            misn_stage = 1
+        else
+            misn.osdActive(1)
+            misn_stage = 1
+        end
+    end
+end
+
+
+function prestartBattle()
+    fleetA[1]:broadcast(start_comm)
+    hook.timer(6000, "startBattle")
+    
+function startBattle()
+    misn.osdActive(2)
+    alertEmpire()
+    for _, j in ipairs(fleetE) do
+        j:control(false)
+    end
+    player.pilot():setVisible()
+end
+
+function emp_dead()
+	if deathsB = 1 then
+	diff.apply("empire_dead")
+	misn_stage = 2
+	end
+	
+
+function proteronmessenger()
+	if mesship:exists() then
+	   mesship:broadcast("Proteron Army ready to move in! Prepare to return to base! Congratulations Team Alpha!")
+	   hook.timer (20000, "proteronmessenger")
+	end
+end
+
+function addProteron()
+   mesship = pilot.add( "Proteron Derivitive")
+   mesship:rename("Messenger")
+   mesship:setFaction("Proteron")
+   mesship:setFriendly()
+   mesship:setVisplayer()
+   mesship:setHilight()
+   
+   mesship:rmOutfit("all")
+   mesship:addOutfit( "Engine Reroute", l )
+   mesship:setFuel( true )
+   
+function land()
+	if misn_stage == 2 and planet.cur() == misn_base then
+	  
+	   tk.msg( title[3], string.format(text[3], misn_base:name()) )
+	   
+	   faction.modPlayerSingle("Proteron",10)
+	   player.pay (900000)
+	   
+	   misn.finish(true)
+	end
+end
+
+function abort()
+	faction.modPlayerSingle("Proteron",-5)
+	misn.finish(false)
+end
