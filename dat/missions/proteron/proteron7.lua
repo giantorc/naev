@@ -8,6 +8,8 @@ else
 	desc{}
 	osd{}
 	
+	misn_title = "Attack"
+	
 	desc[1] = "Attack Empire"
 	
 	reward = 500000 --500k because harder msn

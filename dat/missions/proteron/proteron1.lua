@@ -1,3 +1,4 @@
+--
 include "numstring.lua"
 
 lang = naev.lang()
@@ -28,7 +29,7 @@ include "dat/missions/Proteron/Common.lua"
 
 function create()
 	reward = 50000
-	startworld = planet.cur()
+	startworld = planet.get("Praxis")
 	targetasset = planet.get("Raelid Outpost")
 	targetsystem = system.get("Raelid")
 	if system.cur() == targetsystem then
