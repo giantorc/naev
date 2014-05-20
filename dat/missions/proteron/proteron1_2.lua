@@ -75,7 +75,7 @@ function land ()
     if planet.cur() == targetasset then
     tk.msg(title[3],text[3])
     player.pay (reward)
-     
+end
 
 function abort()
     misn.finish(false)
