@@ -858,7 +858,7 @@
   </avail>
  </mission>
  <mission name="Cargo Courier">
-  <lua>proteron/proteron1</lua>
+  <lua>proteron/proteron1_2</lua>
   <avail>
    <priority>3</priority>
    <chance>30</chance>
@@ -867,6 +867,8 @@
    <faction>Empire</faction>
    <faction>Proteron</faction>
    <faction>Indepedent</faction>
+   <faction>Trader</faction>
+   <faction>Goddard</faction>
   </avail>
- </mission>
+	 </mission>
 </Missions>
