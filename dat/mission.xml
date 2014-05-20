@@ -857,11 +857,11 @@
    <faction>Trader</faction>
   </avail>
  </mission>
- <mission name="Carry Cargo">
+ <mission name="Proteron 1">
   <lua>proteron/proteron1_2</lua>
   <avail>
-   <priority>3</priority>
-   <chance>30</chance>
+   <priority>2</priority>
+   <chance>1</chance>
    <location>Bar</location>
    <faction>Dvaered</faction>
    <faction>Empire</faction>
@@ -869,6 +869,6 @@
    <faction>Independent</faction>
    <faction>Trader</faction>
    <faction>Goddard</faction>
-  </avail>
-	 </mission>
+   </avail>
+  </mission>
 </Missions>

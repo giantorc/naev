@@ -25,8 +25,7 @@ else -- default english
     -- Mission details
     misn_title = "Carry Cargo"
     misn_reward = "50000 credits"
-    misn_desc[1] = "Baron Sauterfeldt has summoned you to his ship, which is in the %s system."
-    misn_desc[2] = "Baron Sauterfeldt has tasked you with finding an ancient artefact, but he doesn't know exactly where to get it."
+    misn_desc[1] = "Carry Cargo to the Raelid System"
     
     -- NPC stuff
     npc_desc = "A Black Haired Man"
@@ -55,7 +54,7 @@ function accept()
 
         misn.setTitle(misn_title)
         misn.setReward(reward)
-        misn.setDesc(misn_desc[1]:format(baronsys:name()))
+        misn.setDesc(misn_desc[1]()))
         misn.osdCreate(misn_title, { osd[1]})
         marker = misn.markerAdd(targetsystem, "low")
         if freecargo < 10 then
