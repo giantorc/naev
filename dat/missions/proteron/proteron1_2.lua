@@ -17,7 +17,7 @@ else -- default english
     refusetitle = "Sorry, not today"
     refusetext = [[    "If you wish, I will try to find someone else"]]
     
-    text[2] = [[[[The man calmly says under his breath to you; "Be ready for combat... Since I do not have my ship, I will not be helpful if and when you are attacked by the pirates]]]]
+    text[2] = [[The man calmly says under his breath to you; "Be ready for combat... Since I do not have my ship, I will not be helpful if and when you are attacked by the pirates]]
 
     title[3] = "Mission Success"
     text[3] = [[The goods are rushed off your ship by a group of men in strange Uniforms]] 

@@ -857,7 +857,7 @@
    <faction>Trader</faction>
   </avail>
  </mission>
- <mission name="Cargo Courier">
+ <mission name="Carry Cargo">
   <lua>proteron/proteron1_2</lua>
   <avail>
    <priority>3</priority>
@@ -866,7 +866,7 @@
    <faction>Dvaered</faction>
    <faction>Empire</faction>
    <faction>Proteron</faction>
-   <faction>Indepedent</faction>
+   <faction>Independent</faction>
    <faction>Trader</faction>
    <faction>Goddard</faction>
   </avail>
