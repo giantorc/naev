@@ -47,7 +47,7 @@ function accept()
     stage = 1    
     reward = (reward)
     
-    if tk.yesno(title[1], text[1]:format)) then
+    if tk.yesno(title[1], text[1]:format) then
         tk.msg(title[2], text[2]
 
         misn.setTitle(misn_title)
