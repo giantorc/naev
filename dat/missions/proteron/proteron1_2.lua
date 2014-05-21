@@ -48,7 +48,6 @@ function accept()
     reward = (reward)
     
     if tk.yesno(title[1], text[1]:format)) then
-        misn.accept(true)
         tk.msg(title[2], text[2]
 
         misn.setTitle(misn_title)
